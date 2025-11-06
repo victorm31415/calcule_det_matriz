@@ -32,6 +32,7 @@ else:
     if len(el1_3) != 3 or len(el2_3) != 3 or len(el3_3) != 3:
             print("Quantidade de elementos insuficientes ou excedente, processo finalizando.")
             sys.exit()
+        ##CORRECAO NECESSARIA A PARTIR DESTE PONTO, AINDA NÃO MEXI
     diag_prin3 = float(el1_3[0])*float(el2_3[1])*float(el3_3[2]) + float(el1_3[1])*float(el2_3[2])*float(el3_3[0]) + float(el1_3[2])*float(el2_3[0])*float(el3_3[1])
     diag_sec3 = float(el1_3[2])*float(el2_3[1])*float(el3_3[0]) + float(el1_3[0])*float(el2_3[2])*float(el3_3[1]) + float(el1_3[1])*float(el2_3[0])*float(el3_3[2])
     det3 = diag_prin3 - diag_sec3
