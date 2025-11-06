@@ -29,11 +29,10 @@ else:
     line_3_1 = [eval(x.replace("^", "**")) for x in line_3_1]
     line_3_2 = [eval(x.replace("^", "**")) for x in line_3_2]
     line_3_3 = [eval(x.replace("^", "**")) for x in line_3_3]
-    if len(el1_3) != 3 or len(el2_3) != 3 or len(el3_3) != 3:
+    if len(line_3_1) != 3 or len(line_3_2) != 3 or len(line_3_3) != 3:
             print("Quantidade de elementos insuficientes ou excedente, processo finalizando.")
             sys.exit()
-        ##CORRECAO NECESSARIA A PARTIR DESTE PONTO, AINDA NÃO MEXI
-    diag_prin3 = float(el1_3[0])*float(el2_3[1])*float(el3_3[2]) + float(el1_3[1])*float(el2_3[2])*float(el3_3[0]) + float(el1_3[2])*float(el2_3[0])*float(el3_3[1])
-    diag_sec3 = float(el1_3[2])*float(el2_3[1])*float(el3_3[0]) + float(el1_3[0])*float(el2_3[2])*float(el3_3[1]) + float(el1_3[1])*float(el2_3[0])*float(el3_3[2])
+    diag_prin3 = float(line_3_1[0])*float(line_3_2[1])*float(line_3_3[2]) + float(line_3_1[1])*float(line_3_2[2])*float(line_3_3[0]) + float(line_3_1[2])*float(line_3_2[0])*float(line_3_3[1])
+    diag_sec3 = float(line_3_1[2])*float(line_3_2[1])*float(line_3_3[0]) + float(line_3_1[0])*float(line_3_2[2])*float(line_3_3[1]) + float(line_3_1[1])*float(line_3_2[0])*float(line_3_3[2])
     det3 = diag_prin3 - diag_sec3
     print(f"A determinante da sua matriz é {det3}")
